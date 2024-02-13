@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hotal_booking</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        #firstsection{
+            width: 100%;
+            height: 100px;
+            background-color: rgb(30, 29, 29);
+
+        }
+        .header{
+            display: flex;
+            justify-content: space-between;
+            padding-top: 30px;
+            padding:30px 30px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+        }
+        .hotal{
+            font-size: 40px;
+            color: white;
+            text-transform: uppercase;
+            font-weight: bold;
+
+        }
+
+        nav ul li{
+            list-style: none;
+        }
+
+        nav ul li a{
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 40px;
+            color: white;
+            font-weight: 100;
+            cursor: pointer;
+        }
+        nav ul li a:hover{
+            color: #f80303;
+            cursor: pointer;
+
+        }
+        .container{
+            max-width: 100%;
+            position: relative;
+            margin: auto;
+        }
+        .myslides img{
+            width: 100%;
+            height: 94vh;
+        }
+
+        .welcome{
+            margin: auto;
+            font-size: 5em;
+            font-style: italic;
+            font-weight: bolder;
+            color: white;
+            margin-top: -590px;
+            position: absolute;
+            padding-left: 450px;
+        
+        }
+        .para{
+            text-align: center;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 100;
+        }
+
+        .packagesfirst{
+            padding: 20px;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            
+        }
+        .style{
+            text-transform: uppercase;
+            color: #f80303;
+            font-style: italic ;
+            padding: 22px;
+
+
+        }
+
+        img{
+            width: 600px;
+            height: 400px;
+            border-radius: 5px;
+        }
+
+        .mumbai{
+            font-size: 28px ;
+            font-weight: 500;
+            padding: 10px;
+        }
+        .mumbaiimg{
+            width: 600px;
+            height: 600px;
+            margin-inline: 10px;
+            box-shadow: 2px 3px 4px  4px;
+            background-color: #d8cccc;
+            border-radius: 5px;
+        }
+
+        .lorem{
+            font-size: 18px;
+            text-align: left;
+            margin-left: 10px;
+            padding: 10px;
+        }
+        button{
+            margin-top: 10px;
+            border-radius: none;
+            border: none;
+            padding: 20px;
+            background-color: #f80303;
+        }
+       
+
+        .booknow a{
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 18px;
+            color: black;
+            padding: 10px;
+            border: none;
+        }
+
+        .services{
+            
+            display: flex;
+            justify-content: space-between;
+            margin-inline: 40px;
+        }
+        .ser{
+            width: 510px;
+            height: 350px;
+            margin-inline: 40px;
+            padding: 30px;
+            text-align: justify;
+        }
+        .ser h1{
+            text-align: center;
+            font-size: 29px;
+            padding: 10px;
+        }
+        .ser p{
+            font-size: 20px ;
+
+        }
+        .ser:hover{
+            width: 510px;
+            font-size: 20px;
+            height: 350px;
+            box-shadow: 5px 3px 4px 4px ;
+            border-radius: 10px;
+        }
+
+        .gallary{
+            margin: 20px;
+            display: flex;
+            padding: 20px;
+            justify-content: center;
+            
+        }
+
+        .gallaryimg img{
+            width: 500px;
+            margin-inline: 20px;
+            border-radius: 5px;
+
+        }
+        #contact{
+            background-image: url(bg-0002.jpg);
+            width: 100%;
+            height: 80vh;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            
+
+        }
+        .contact{
+            display: flex;
+            justify-content:center;
+            gap: 100px; 
+           
+            
+        }
+        .contactimg img{
+            width: 500px;
+            height: 500px;
+
+        }
+        .contactform{
+            text-align: center;
+            width: 500px;
+            height: 600px;
+            box-shadow: 2px 3px 4px ;
+            padding-top: 20px;
+            padding-left: 20px;
+        }
+
+        input{
+            width: 300px;
+            height: 30px;
+            font-size: 20px;
+            border: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        label{
+            font-size: 20px;
+            font-weight: bold;
+            gap:20px;
+        }
+        textarea{
+            margin: 20px;
+        }
+
+        #book{
+            background-image: url(bg-0002.jpg);
+            width: 100%;
+            height: 80vh;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .book{
+
+        padding-top: 20px;
+        }
+
+        .booking{
+            text-align: center;
+        }
+
+        error{
+            font-size: 18px ;
+            margin-top: 5px;
+            color: #f80303;
+            display: block;
+        }
+
+        label{
+            text-transform: capitalize;
+        }
+
+        #final{
+            width: 100%;
+            height: 50vh;
+            display: flex;
+            padding-top: 40px;
+            justify-content: space-around;
+            background-color: gray;
+            color: white;
+
+        }
+        .aboutus{
+            width: 400px;
+
+            
+        }
+
+    </style>
+</head>
+<body>
+    <section id="firstsection">
+        <header class="header">
+            <span  class="hotal">hotal</span>
+            
+            <nav>
+                <ul>
+                    <li><a href="#firstsection">home</a></li>
+                    <li><a href="#packages">packages</a></li>
+                    <li><a href="#services">service</a></li>
+                    <li><a href="#gallary">gallary</a></li>
+                    <li><a href="#">review</a></li>
+                    <li><a href="#contact">contact</a></li>
+                    <li><a href="#book">book</a></li>
+                </ul>
+
+            </nav>
+
+
+        </header>
+    </section>
+    <section>
+        <div class="container">
+            <div class="myslides">
+                <img src="1.jpg" alt="">
+            </div>
+            <div class="myslides">
+                <img src="2.jpg" alt="">
+            </div>
+            <div class="myslides">
+                <img src="3.jpg" alt="">
+            </div>
+            <div class="myslides">
+                <img src="A1.jpg" alt="">
+            </div>
+            <div class="myslides">
+                <img src="A2.jpg" alt="">
+            </div>
+            <div class="myslides">
+                <img src="A3.jpg" alt="">
+            </div>
+        </div>
+        <div class="welcome">
+            <span style="text-align: center;">welcom to a global icon of luxury</span>
+            <p class="para"> Dicover New Place Width Us luxury Awaits</p>
+        </div>
+    </section>
+    <section id="packages">
+        <h1 class="style" style="text-align: center; font-size:4em">packages</h1>
+        <div class="packages">
+            <div class="packagesfirst">
+                <div class="mumbaiimg">
+                    <img src="A3.jpg" alt="">
+                   <p class="mumbai">Mumbai</p>
+                   <p class="lorem">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam sint odio dolorum nostrum tempore recusandae quo saepe consequatur illo accusantium.</p>
+                   <button class="booknow"><a href="#book"> book now</a></button>
+                </div>
+                <div class="mumbaiimg">
+                    <img src="A1.jpg" alt="">
+                    <p class="mumbai">Sydney</p>
+                    
+                    <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde delectus ipsam mollitia, dolore eius fugit nam suscipit dolor dolores corrupti!</p>
+                    <button class="booknow"><a href="#book"> book now</a></button>
+                </div>
+                <div class="mumbaiimg">
+                    <img src="A6.jpg" alt="">
+                    <p class="mumbai">Hawaii</p>
+                    <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam facilis hic eligendi corrupti inventore dicta nostrum minus modi dignissimos ratione.</p>
+                    <button class="booknow"><a href="#book"> book now</a></button>
+                </div>
+            </div>
+            <div class="packagesfirst">
+                <div class="mumbaiimg">
+                    <img src="A4.jpg" alt="">
+                   <p class="mumbai">Eypt</p>
+                   <p class="lorem">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam sint odio dolorum nostrum tempore recusandae quo saepe consequatur illo accusantium.</p>
+                   <button class="booknow"><a href="#book"> book now</a></button>
+                </div>
+                <div class="mumbaiimg">
+                    <img src="A5.jpg" alt="">
+                    <p class="mumbai">Tokyo</p>
+                    
+                    <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde delectus ipsam mollitia, dolore eius fugit nam suscipit dolor dolores corrupti!</p>
+                    <button class="booknow"><a href="#book"> book now</a></button>
+                </div>
+                <div class="mumbaiimg">
+                    <img src="login.jpg" alt="">
+                    <p class="mumbai">Pairs</p>
+                    <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam facilis hic eligendi corrupti inventore dicta nostrum minus modi dignissimos ratione.</p>
+                    <button class="booknow"><a href="#book"> book now</a></button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="services">
+        <h1 class="style" style="text-align: center; font-size:4em">services</h1>
+        
+        
+
+        <div class="services">
+            
+            <div class="ser">
+                <h1>Affordable Hotal</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos at facere veritatis asperiores quos alias, corporis blanditiis magni numquam praesentium in esse doloribus animi eius. Deleniti recusandae reiciendis soluta qui, error quo laudantium ut inventore non itaque necessitatibus eaque nulla amet exercitationem voluptates, iste mollitia. Molestiae sapiente quis fuga ratione provident sed neque ad, atque hic eos voluptas quisquam laborum.</p>
+            </div>
+            <div class="ser">
+                <h1>Food And Drinks</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quibusdam quam repudiandae deleniti provident pariatur dolorum? Tenetur dignissimos consequuntur mollitia quisquam veritatis quaerat consectetur aperiam necessitatibus quasi doloremque repellat quod provident, aspernatur magnam nesciunt dolorem iure eum, accusantium pariatur earum deleniti adipisci tempore? Ab, officiis modi neque tempore a assumenda, ad vitae, ullam libero quia commodi fuga ipsam delectus perferendis.</p>
+            </div>
+            <div class="ser">
+                <h1>Safty Guide</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur doloribus reprehenderit impedit sit, nobis ad, eligendi ea in libero error atque quam adipisci vero odit mollitia voluptatem nisi est necessitatibus minus, voluptatum temporibus sapiente accusantium dolorum. Error quia explicabo quam, deleniti amet aliquid omnis tempore! Ratione fuga animi nulla, reprehenderit saepe necessitatibus incidunt nam. Enim temporibus vitae corporis aperiam non.</p>
+            </div>
+        </div>
+        <div class="services">
+            <div class="ser">
+                <h1>Around The World</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, reiciendis! Voluptatem nemo expedita consequatur alias adipisci! Voluptatibus vero odio beatae dicta aspernatur, exercitationem veniam molestias temporibus sint quibusdam illum odit omnis cupiditate unde delectus maiores sed? Quia, tenetur. Nesciunt numquam eos eveniet, adipisci explicabo temporibus sed iste possimus? Sapiente fugit animi qui fugiat. Voluptates, molestiae fugit quia porro perferendis possimus.</p>
+            </div>
+            <div class="ser">
+                <h1>Fastest Travel</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, laborum delectus. Illo voluptatibus sed dolores laboriosam modi voluptas cum quos eos eaque unde, tempora cupiditate maxime atque earum quae repudiandae rem vero impedit culpa neque velit ullam! In provident soluta sed tempore harum reprehenderit cupiditate, non odit dolores fugit unde eum hic expedita eaque officiis cum aliquam dolorum sunt laudantium.
+                </p>
+            </div>
+
+            <div class="ser">
+                <h1>Adventures</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora iusto sed quisquam, rem magnam veritatis illo aspernatur dolorum odio! Beatae placeat quibusdam, vitae dolore enim aliquam nemo iure delectus sit tempora libero numquam dolorum eaque sint rerum nobis laudantium minima nihil possimus! Amet neque quia obcaecati nulla doloribus eius veniam numquam fuga sunt, harum rem dolorum, laudantium reprehenderit consequuntur omnis?</p>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="gallary">
+        <h1 class="style" style="text-align: center; font-size:4em">gallary</h1>
+        
+        <div class="gallary">
+            <div class="gallaryimg">
+                <img src="4.jpg" alt="">
+            </div>
+            <div class="gallaryimg">
+                <img src="5.jpg" alt="">
+            </div>
+            <div class="gallaryimg">
+                <img src="6.jpg" alt="">
+            </div>       
+
+        </div>
+        <div class="gallary">
+            <div class="gallaryimg">
+                <img src="A4.jpg" alt="">
+            </div>
+            <div class="gallaryimg">
+                <img src="A5.jpg" alt="">
+            </div>
+            <div class="gallaryimg">
+                <img src="A6.jpg" alt="">
+            </div>
+            
+        </div>
+
+    </section>
+    <section id="contact">
+        <h1 class="style" style="text-align: center; font-size:4em">contact</h1>
+        <div class="contact">
+            <div class="contactimg">
+                <img src="project4.3.jpeg" alt="">
+            </div>
+            <div class="contactform">
+                <form action="#" method="post">
+                    <label for="uname"> <b>Name</b></label>
+                    <input type="text" name="uname" placeholder="Enter Name" required><br>
+                    <label for="email"><b>Email</b></label>
+                    <input type="email" name="email" placeholder="Enter Name" required> <br>
+                    <label for="number" > <b>Number</b></label>
+                    <input type="number" name="number" placeholder="Enter Number" required> <br>
+                    <label for="sub"><b>Subject</b></label>
+                    <input type="text" name="sub" placeholder="Your Subject" required> <br>
+                    <label for="message"><b>Message</b></label>
+                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter_Message">
+
+                    </textarea>
+
+                    <br>
+
+                    <button type="submit"> submit</button>
+
+                </form>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="book">
+        <div class="book">
+            <h1 class="style" style="text-align: center; font-size:4em">book</h1>
+            <div class="booking">
+               <form action="#" method="post" onsubmit="return validate()">
+                 <div class="divbooking">
+                    <label for="uname">username</label>
+                    <input type="text" name="uname" placeholder="Enter username" required>
+                    <br>
+                    <label for="email"> email</label>
+                    <input type="email" name="email" placeholder="Enter email" required>
+                    <br>
+                    <label for="phone" > Number</label>
+                    <input type="number" name="phone" placeholder="Enter phone nmber" required>
+                    <br>
+                    <label for="many"> how many</label>
+                    <input type="number" name="many" placeholder="Enter number of guests" required>
+                    <br>
+                    <label for="arrival" > arrivals</label>
+                    <input type="date"  name="arrival" required><br>
+                    <label for="levving">leaving</label>
+                    <input type="date" name="levving" required>
+                    <br>
+                    <label for="password">password</label>
+                    <input id="password" type="password" name="password" placeholder="Enter password" required>
+                    <br>
+                    <label for="confpass">confirm password</label>
+                    <input id="confirmpassword" type="password" name="confpass" 
+                    placeholder="Enter confirm password" onkeyup="check(this)" required>
+                    <error id="alart"></error>
+
+                 </div>
+                 <button type="submit"> submit</button>
+
+
+               </form>
+            </div>
+
+        </div>
+
+    </section>
+    <section id="final">
+        <div class="aboutus">
+            <h1 .class="about">about us</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque corrupti quas perspiciatis iure omnis natus ad, dolorem quia aliquid autem!</p>
+        </div>
+        <div class="about">
+            <h1 class="about1"> branch locations</h1>
+            <p>india</p>
+            <p>USA</p>
+            <p>japan</p>
+            
+        </div>
+        <div class="about">
+            <h1 class="about1">quick links</h1>
+            <p>home</p>
+            <p>package</p>
+            <p>service</p>
+            <p>gallary</p>
+            <p>review</p>
+            <p>contact</p>
+            <p>book</p>
+
+        </div>
+        <div class="about">
+            <h1 class="about1">fallow</h1>
+            <p>facebook</p>
+            <p>instagram</p>
+            <p>twitter</p>
+            <p>likedin</p>
+        </div>
+
+
+    </section>
+
+    
+
+
+
+    <script>
+
+        let slideindex = 0;
+        container();
+
+        function container(){
+            let i;
+            let slides = document.getElementsByClassName("myslides");
+
+            for( i =0; i < slides.length; i++){
+                slides[i].style.display="none";               
+            }
+            slideindex++;
+            if( slideindex > slides.length){
+               slideindex=1
+            }
+
+            slides[slideindex-1].style.display="block";
+
+            setTimeout(container,2000);
+        }
+
+        var password = document.getElementById("password");
+        var falge=1;
+
+
+        function check(elem){
+
+            if(elem.value.length>0){
+                if(elem.value != password.value){
+                    document.getElementById("alart").innerText="confirm password does not match";
+                    flage=0;
+
+                }
+                else{
+                    document.getElementById("alart").innerText="";
+                    flage=1;
+                }
+            
+            }
+
+            else{
+                document.getElementById("alart").innerText="please enter confirm password";
+                flage=0;
+
+            }
+        }
+
+        function validate(){
+            if(flage == 1){
+                return turn;
+            }
+            else{
+                return false;
+            }
+        }
+        
+
+    </script>
+    
+</body>
+</html>
